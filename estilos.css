@@ -1,0 +1,187 @@
+body {
+    background-image: url('../imgs/fondo5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#data {
+    width: 40%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 150px;
+    top: 160px;
+    background: rgba(0, 0, 0, 0.9);
+    /* Fondo negro semitransparente */
+    border-radius: 5px;
+    color: white;
+    /* Letras en blanco */
+    max-height: 80vh;
+    /* Máximo alto para asegurar que no ocupe toda la pantalla */
+}
+
+.navbar {
+    background-color: #000;
+    /* Color de fondo negro */
+    height: 60px;
+    /* Altura del navbar */
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente el contenido del navbar */
+    padding: 0 15px;
+    /* Espaciado interior para no pegar el contenido a los bordes */
+    position: fixed;
+}
+
+.navbar-brand img {
+    margin-top: 20px;
+    height: 120px;
+    /* Ajusta la altura de tu logo */
+}
+
+/* Estilo base para la imagen del logo */
+.navbar-brand img {
+    transition: transform 0.5s ease;
+    /* Suaviza la transformación */
+}
+
+/* Estilo al pasar el ratón por encima */
+.navbar-brand img:hover {
+    transform: scale(1.1);
+    /* Aumenta el tamaño de la imagen en un 10% */
+}
+
+.character-card {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    /* Línea blanca para separar personajes */
+    padding: 20px;
+    display: block;
+    /* Cambiado de flex a block para alineación vertical */
+    margin-top: 30px;
+    margin-bottom: -40px;
+}
+
+.character-image {
+    width: 290px;
+    /* Tamaño uniforme para todas las imágenes */
+    height: 200px;
+    /* Asegura que la imagen sea cuadrada */
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el espacio sin deformarse */
+    display: block;
+    /* Asegura que la imagen sea un bloque propio */
+    margin: 0 auto;
+    /* Centra la imagen horizontalmente */
+}
+
+
+.character-name {
+    text-align: center;
+    /* Alinea el texto al centro */
+    margin-top: 10px;
+    /* Espacio entre la imagen y el nombre */
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffee00;
+}
+.character-details {
+    width: 40%; /* Ancho para mantener consistencia con el div de la izquierda */
+    height: auto; /* Altura basada en el contenido */
+    margin-left: 860px; /* Posiciona el div a la derecha, ajusta según necesites */
+    padding: 20px; /* Espacio interior */
+    box-sizing: border-box;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 160px; /* Alineación vertical similar al div de la izquierda */
+    background: rgba(255, 255, 255, 0.9); /* Fondo oscuro para contraste */
+    border-radius: 8px; /* Bordes redondeados */
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    max-height: 80vh; /* Máximo alto para asegurar que no ocupe toda la pantalla */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido excede el máximo alto */
+    position: fixed;
+}
+
+.character-details-content {
+    display: flex; /* Diseño flexible para organizar imagen y texto */
+    flex-direction: column; /* Organiza los elementos en columna */
+   
+}
+.character-details img {
+    width: 360px !important;
+    height: 230px !important;
+    object-fit: cover !important;
+    margin: 0 auto !important;
+    border-color: white;
+}
+
+.character-details h2, .character-details p {
+    text-align: left; /* Alineación de texto al centro */
+    font-size: 17px;
+    margin-top: 5px; /* Reduce el margen superior para acercar los elementos */
+    margin-bottom: 5px; /* Reduce el margen inferior para acercar los elementos */
+    padding: 0; /* Opcionalmente, elimina el padding si es necesario */
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 700;
+    font-style: normal;
+    
+}
+#character-details {
+    display: none; /* Oculta el div inicialmente */
+}
+.pagination-buttons {
+    text-align: center; /* Centra los botones horizontalmente */
+    margin-top: -80px; /* Ajusta según la altura de tu div #data */
+
+    width: 100%; /* Ajusta al ancho de la pantalla o contenedor */
+    text-align: center; /* Centra los botones horizontalmente */
+    padding: 20px 0; /* Añade algo de espacio verticalmente */
+    position: fixed;
+}
+
+#prev, #next {
+    background-color: #000; /* Fondo negro */
+    color: #FFD700; /* Texto amarillo */
+    border: 1px solid #FFD700; /* Borde amarillo */
+    padding: 5px 20px; /* Ajusta al tamaño deseado */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin: 0 10px; /* Espacio entre botones */
+  }
+  #prev:disabled, #next:disabled {
+    opacity: 0.5; /* Hace el botón semi-transparente cuando está deshabilitado */
+    cursor: default; /* Cursor por defecto para indicar que no es clickeable */
+  }
+  .details-navigation-buttons {
+    margin-top: 590px;
+    margin-left :1070px;
+    background-color: #000; /* Fondo negro */
+    color: #ffffff; /* Texto amarillo */
+    padding: 5px 20px; /* Ajusta al tamaño deseado */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin: 0 px; /* Espacio entre botones */
+    position: fixed;
+}
+#details-prev, #details-next {
+    background-color: #000; /* Fondo negro */
+    color: #ffffff; /* Texto amarillo */
+    padding: 5px 20px; /* Ajusta al tamaño deseado */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin: 0 10px; /* Espacio entre botones */
+    display: none; /* Oculta los botones inicialmente */
+
+  }
+
+.details-navigation-buttons button:disabled {
+    opacity: 0.5; /* Hace el botón semi-transparente cuando está deshabilitado */
+    cursor: default; /* Cursor por defecto para indicar que no es clickeable */
+}
+
+
